@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+        }
+        #button2{
+            
+            position: absolute;
+            left: 40%;
+            bottom: 50%;
+          
+            
+        }
+        #button {
+            position: absolute;
+            transition: 0.5s;
+            left: 60%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        
+    </style>
+</head>
+<h1> cute ko diba</h1>
+<body>
+    <button id="button" onmouseover="moveButton()">No</button>
+    <a href="flowers.html">
+        <button id="button2">yes</button>
+    </a>
+    <script>
+        function moveButton() {
+            const button = document.getElementById("button");
+            const maxWidth = window.innerWidth - button.offsetWidth;
+            const maxHeight = window.innerHeight - button.offsetHeight;
+            
+            const randomX = Math.random() * maxWidth;
+            const randomY = Math.random() * maxHeight;
+
+            button.style.transition = "0.2s";
+            button.style.left = randomX + "px";
+            button.style.top = randomY + "px";
+        }
+    </script>
+    
+        <a href="flowers.html">
+            <button id="button2">yes</button>
+        </a>
+        
+    
+</body>
+</html>
